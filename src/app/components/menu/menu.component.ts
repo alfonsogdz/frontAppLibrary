@@ -1,15 +1,14 @@
-import { Component, OnInit, DoCheck } from '@angular/core';
-import { User } from './models/user';
-import { UserService } from './services/user.service';
+import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/user.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.css'],
   providers: [UserService]
 })
-export class AppComponent implements OnInit, DoCheck{
-  //title = 'app';
+export class MenuComponent implements OnInit {
+
   public identity;
   public token;
 
@@ -32,4 +31,5 @@ export class AppComponent implements OnInit, DoCheck{
     
 
   }
+
 }

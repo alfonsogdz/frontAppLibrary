@@ -1,0 +1,43 @@
+<body>
+
+
+    <div class="loading" *ngIf="!books">
+        Cargando...
+    </div>
+
+
+    <div class="col-md-12" *ngIf="books">
+        <h2>{{title}}</h2>
+        <hr>
+        <table class="table table-hover table-stripped" id="table-cart">
+            <tr>
+                <th class="col-md-7">Libro</th>
+                <th>Precio</th>
+                <th>Disponible</th>
+                <th>Acciones</th>
+            </tr>
+
+            <tr *ngFor="let book of books">
+                <td class="col-md-7">
+                    <a [routerLink]="['/libro', book.id]"> {{book.title}}</a>
+                </td>
+                <td>
+                    {{book.price}}
+                </td>
+                <td>
+                    <span *ngIf="book.status == 'true'">Si</span>
+                    <span *ngIf="book.status != 'true'">No</span>
+                    <!-- {{book.status}} -->
+                </td>
+                <td>
+                    <a [routerLink]="['/editar-libro', book.id]" class="btn btn-warning"><span
+                            class="glyphicon glyphicon-wrench"></span> Editar</a>
+                    <a (click)="deleteBook(book.id)" class="btn btn-danger"><span
+                            class="glyphicon glyphicon-remove-sign"></span> Borrar</a>
+                </td>
+            </tr>
+
+
+        </table>
+    </div>
+</body>

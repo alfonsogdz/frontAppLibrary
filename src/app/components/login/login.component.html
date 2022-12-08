@@ -1,0 +1,51 @@
+<body>
+
+
+    <div class="alert alert-success" *ngIf="status == 'success'">
+        Te has identificado correctamente :)
+    </div>
+
+
+    <div class="alert alert-danger" *ngIf="status == 'error'">
+        No te has identificado :/
+    </div>
+
+    <div id="login">
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" id="login-form" class="form">
+
+                            <h3 class="text-center text-warning">{{title}}</h3>
+                            <div class="form-group">
+                                <p>
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" #email="ngModel" [(ngModel)]="user.email" required
+                                        class="form-control">
+                                    <span *ngIf="!email.valid && email.touched">
+                                        El email no es valido
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="form-group">
+                                <p>
+                                    <label for="password">Password</label>
+                                    <input type="password" name="password" #password="ngModel"
+                                        [(ngModel)]="user.password" required class="form-control">
+                                    <span *ngIf="!password.valid && password.touched">
+                                        La contraseña no es valida
+                                    </span>
+                                </p>
+                            </div>
+
+                            <input type="submit" value="Entrar" class="btn btn-primary"
+                                [disabled]="!loginForm.form.valid">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>

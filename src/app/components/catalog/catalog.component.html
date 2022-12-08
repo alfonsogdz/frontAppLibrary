@@ -1,0 +1,23 @@
+<body class="bg-gradient">
+  <div class="container text-center">
+    <div id="products" class="cont">
+      <div *ngFor="let book of books">
+        <div class="white-panel">
+          <h3>{{ book.title }}</h3>
+          <img src="{{ book.imagen }}" class="img-responsive">
+          <h5><span>Autor: {{ book.autor }}</span></h5>
+          <div class="panel">
+            <h3><span class="label label-success">Precio: $ {{ book.price }}</span></h3>
+            <hr>
+            <p>
+              <a class="btn btn-primary" [routerLink]="['/libro', book.id]"> <span
+                  class="glyphicon glyphicon-arrow-right"></span>
+                Ver mas
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

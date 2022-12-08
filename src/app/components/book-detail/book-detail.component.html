@@ -1,0 +1,30 @@
+<div class="col-md-12" id="body" *ngIf="book">
+ <!-- <h1>{{book.title}}</h1>-->
+
+
+  <div class="page-header" style="text-align: center; color: #ffff">
+    <strong *ngIf="book.status == 'true'"> Este libro esta disponible </strong>
+  </div>
+  
+  <div class="row">
+
+		<div class="col-sm-6" style="align-items: center;">
+			<div class="product">
+        <img src="{{book.imagen}}" alt="portada">
+      </div>
+    </div>
+    <div class="col-sm-6">
+			<div class="product" style="text-align: justify;">
+        <h3>{{ book.title}}</h3>
+        <h5>Autor: {{ book.autor}}</h5>
+        {{ book.description }}
+        <h3><span class="label label-success">Precio: $ {{ book.price }}</span></h3><hr>
+      </div>
+    </div>
+					
+  
+
+  
+
+
+</div>

@@ -1,0 +1,115 @@
+/* You can add global styles to this file, and also import other style files */
+
+#body{
+    background: #373B44;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+.product img{
+	margin: 10px auto;
+	max-width: 400px;
+	display: block;
+}
+
+table
+{
+	background: #fff;
+}
+
+.table-order
+{
+	border: 1px solid #c0c0c0;
+	margin-bottom: 5px;
+}
+
+table tr th
+{
+	text-align: center;
+}
+
+#grid-products {
+	position: relative;
+	max-width: 100%;
+	width: 100%;
+}
+img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+.white-panel {
+	position: absolute;
+	background: white;
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+	padding: 10px;
+}
+.white-panel h1 {
+	font-size: 1em;
+}
+.white-panel h1 a {
+	color: #A92733;
+}
+.white-panel:hover {
+	box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+	margin-top: -5px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.product
+{
+	background: #fff;
+	border-radius: 1em;
+	margin-bottom: 10px;
+	padding: 1em;
+}
+
+.product img{
+	margin: 10px auto;
+	max-width: 400px;
+}
+
+.main-title
+{
+	color: orange !important;
+	font-family: 'Poiret One', cursive;
+	font-size: 2.5em;
+}
+
+footer
+{
+	background: #222;
+	color: #fff;
+}
+
+.redes
+{
+	text-align: center;
+}
+
+.redes li
+{
+	display: inline-block;
+}
+
+.redes li a
+{
+	color: orange;
+}
+
+.avatar
+{
+	border: 3px solid orange;
+	border-radius: 50%;
+	height: 100px;
+	width: 100px;
+}
+
+.navbar
+{
+	margin-bottom: 0;
+}

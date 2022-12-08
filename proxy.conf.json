@@ -1,0 +1,7 @@
+{
+    "/apistore.test/*": {
+        "target": "apistore.test",
+        "secure": false,
+        "loglevel": "debug"
+    }
+}
